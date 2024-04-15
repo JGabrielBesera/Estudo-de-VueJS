@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="./vue.js"></script>
+    <title>Vue.Js</title>
+</head>
+
+<body>
+    <!-- <div class="" id="app-teste1">{{ mensagem }}</div> <br>
+    <script>
+        const vm = new Vue({
+            el: "#app-teste1",
+            data: {
+                mensagem: "Primeira mensagem no Vue.js"
+            },
+
+        });
+        console.log(vm);
+    </script> -->
+
+    <div class="" id="app-teste2">
+        {{mensagem}} <br>
+        Valor Total: {{valorTotal}} <br>
+        Logado: {{logado}} <br>
+        Hobbies: {{ hobbies[2]}} <br>
+        Cursos : {{ perfil.cursos[1].nome +', Ele Durou: '+ perfil.cursos[0].cargaHoraria}}
+    </div>
+    <script>
+        options = {
+            el: "#app-teste2",
+            data: {
+                mensagem: "Primeiro template controlado pelo Vue.js",
+                valorTotal: 150.33,
+                logado: false,
+                hobbies: ["Game", "LOL", "Dota"],
+                perfil : {
+                    nome: "Fulado",
+                    site: "Fulano.org.br",
+                    idade: 35,
+                    cursos : [
+                        { nome: "Laravel", cargaHoraria: "50 horas"},
+                        { nome: "MongoDB", cargaHoraria: "40 horas"},
+                    ],
+                }
+            },
+        };
+        const vm = new Vue(options);
+        console.log(options);
+    </script>
+
+    <div class="" id="app-teste3"></div>
+
+
+
+    <script src="https://cdn.jsdelivr.net/npm/vue@2.7.14"></script>
+</body>
+
+</html>
