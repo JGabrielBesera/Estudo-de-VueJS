@@ -33,7 +33,7 @@ const vm = new Vue({
             if (this.inputSalada.includes('alface')) {
                 return "imagens/alface.png"
             } else {
-                return "imagens/padrao/alface.png"
+                return
             }
         },
         ketchup() {

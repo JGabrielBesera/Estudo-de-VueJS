@@ -11,22 +11,25 @@
 
 <body class="bg-dark">
     <nav class="navbar bg-light py-3">
-        <div class="container ">
-            <span class="navbar-brand mb-0 fs-1 fw-bold"> Monte o seu Lanche </span>
+        <div class="container d-flex align-items-center justify-content-center">
+            <span class="navbar-brand text-center mb-0 fs-1 fw-bold"> Monte o seu Lanche </span>
         </div>
     </nav>
-    <div class="container ">
+    <div class="container mt-3">
         <div class="" id="app">
             <div class="row">
                 <div class="col-6 p-5 bg-light">
                     <div class="row mt-2 ">
+                        <div class="row">
+                            <h1> </h1>
+                        </div>
                         <div class="col text-center">
                             <img :src="pao[0]" />
                             <img :src="alface" />
+                            <img :src="hamburguer" />
                             <img :src="ketchup" />
                             <img :src="mostarda" />
                             <img :src="maionese" />
-                            <img :src="hamburguer" />
                             <img :src="pao[1]" />
                         </div>
                     </div>
@@ -38,37 +41,17 @@
                                 <div class="card-header">Tipo do Pão</div>
                                 <div class="card-body">
                                     <div class="form-check form-check-inline">
-                                        <input
-                                        class="form-check-input" 
-                                        type="radio"
-                                        value="gergelim"
-                                        v-model="inputTipoPao">
+                                        <input class="form-check-input" type="radio" value="gergelim" v-model="inputTipoPao">
                                         <label class="form-check-label">
                                             Gergelim
                                         </label>
                                     </div>
 
                                     <div class="form-check form-check-inline">
-                                        <input
-                                        class="form-check-input" 
-                                        type="radio"
-                                        value="australiano"
-                                        v-model="inputTipoPao">
+                                        <input class="form-check-input" type="radio" value="australiano" v-model="inputTipoPao">
 
                                         <label class="form-check-label">
                                             Australiano
-                                        </label>
-                                    </div>
-
-                                    <div class="form-check form-check-inline">
-                                        <input
-                                        class="form-check-input" 
-                                        type="radio"
-                                        value=""
-                                        v-model="inputTipoPao">
-
-                                        <label class="form-check-label">
-                                            Sem Pão
                                         </label>
                                     </div>
                                 </div>
@@ -81,13 +64,63 @@
                                 <div class="card-header">Salada?</div>
                                 <div class="card-body">
                                     <div class="form-check form-check-inline">
-                                        <input
-                                        class="form-check-input" 
-                                        type="checkbox"
-                                        value="alface"
-                                        v-model="inputSalada">
+                                        <input class="form-check-input" type="checkbox" value="alface" v-model="inputSalada">
                                         <label class="form-check-label">
                                             Alface
+                                        </label>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row mt-2 ">
+                        <div class="col">
+                            <div class="card">
+                                <div class="card-header">Molho?</div>
+                                <div class="card-body">
+                                    <div class="form-check form-check-inline">
+                                        <input class="form-check-input" type="checkbox" value="ketchup" v-model="inputMolhos">
+                                        <label class="form-check-label">
+                                            Ketchup
+                                        </label>
+                                    </div>
+                                    <div class="form-check form-check-inline">
+                                        <input class="form-check-input" type="checkbox" value="maionese" v-model="inputMolhos">
+                                        <label class="form-check-label">
+                                            Maionese
+                                        </label>
+                                    </div>
+                                    <div class="form-check form-check-inline">
+                                        <input class="form-check-input" type="checkbox" value="mostarda" v-model="inputMolhos">
+                                        <label class="form-check-label">
+                                            Mostarda
+                                        </label>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row mt-2 ">
+                        <div class="col">
+                            <div class="card">
+                                <div class="card-header">Qual será a Carne??</div>
+                                <div class="card-body">
+                                    <div class="form-check form-check-inline">
+                                        <input class="form-check-input" type="radio" value="frango" v-model="inputTipoHamburguer">
+                                        <label class="form-check-label">
+                                            Frango
+                                        </label>
+                                    </div>
+                                    <div class="form-check form-check-inline">
+                                        <input class="form-check-input" type="radio" value="soja" v-model="inputTipoHamburguer">
+                                        <label class="form-check-label">
+                                            Soja
+                                        </label>
+                                    </div>
+                                    <div class="form-check form-check-inline">
+                                        <input class="form-check-input" type="radio" value="bovino" v-model="inputTipoHamburguer">
+                                        <label class="form-check-label">
+                                            Bovino
                                         </label>
                                     </div>
                                 </div>
@@ -102,7 +135,7 @@
     <script src="./script.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/vue@2.7.14"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.min.js" integrity="sha384-0pUGZvbkm6XF6gxjEnlmuGrJXVbNuzT9qBBavbLwCsOGabYfZo0T0to5eqruptLy" crossorigin="anonymous"></script>
- 
+
 
 </body>
 
